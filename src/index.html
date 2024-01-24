@@ -1,6 +1,6 @@
 ---
-title: 'Pixel Perfect Websites'
-description: 'Meta description for the page'
+title: 'Happy Days Daycare & Preschool'
+description: 'A new take on childcare.'
 preloadImg: '/assets/images/landing.jpg'
 permalink: '/'
 eleventyNavigation:
@@ -35,315 +35,659 @@ eleventyNavigation:
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
+ 
 
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                    class="cs-img"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                    alt="play icon"
-                    width="17"
-                    height="17" />
-                    Get in Touch
-                </a>
-            </div>
-        </div>
+  <!--
+    NOTES:
 
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section>
+    We are using negative margin on the cs-card-group to create the overlapping effect. This pulls the section below it toward it which makes it overlap whatever section is below it. So we need to add extra padding top the the section below it to account for this. Here's the values you need to add to the section below this one to make them work together:
 
-    <!-- ============================================ -->
-    <!--                  Services                    -->
-    <!-- ============================================ -->
+    On mobile:
+    LESS: padding-top: (260/16rem)
+    SCSS: padding-top: calc(260 / 16 * 1rem)
+    CSS: 16.25rem
 
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service1.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 1</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service2.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 2</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service3.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 3</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-    </section>
+    On tablet (768px):
+    /* 132px - 260px */
+    padding-top: clamp(8.25rem, 25vw, 16.25rem);
+-->
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
 
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img 
-                    class="cs-quote-icon"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                    alt="gavel"
-                    width="136"
-                    height="77" />
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
 
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="560">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur, iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi laudantium voluptatibus rem libero error minus quia eligendi sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
+<section id="hero-1482">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Daycare & Preschool</span>
+            <h1 class="cs-title">Together We’ll Explore
+                New Things</h1>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
+                Our mission is to provide affordable, high-quality early education and childcare services for working families to ensure every child.
             </p>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80" />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16" />
+            <a href="" class="cs-button-solid">Get Started</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-house.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                <h3 class="cs-h3">Home-like Environment</h3>
+                <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg" alt="graphic" width="310" height="121" decoding="async" loading="lazy">
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-shield.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                <h3 class="cs-h3">Security and Safety</h3>
+                <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg" alt="graphic" width="310" height="121" decoding="async" loading="lazy">
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-thumb.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                <h3 class="cs-h3">Quality Educators</h3>
+                <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg" alt="graphic" width="310" height="121" decoding="async" loading="lazy">
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/day-care-ball.svg" loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true">
+                <h3 class="cs-h3">Learn by Playing</h3>
+                <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/Vector%204.svg" alt="graphic" width="310" height="121" decoding="async" loading="lazy">
+            </li>
+        </ul>
+    </div>
+    <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare.jpg">
+        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare.jpg" alt="abstract background" width="2250" height="1500" aria-hidden="true">
+    </picture>
+    <div class="cs-graphics-wrapper">
+        <!--Flower-->
+        <img class="cs-flower cs-hide" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower.svg" alt="abstract flower" width="139" height="144" aria-hidden="true">
+        <!--Yellow Blob-->
+        <img class="cs-blob1 cs-hide" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/squiggle-shape.svg" alt="abstract shape" width="378" height="268" aria-hidden="true">
+        <!--Red Blob-->
+        <img class="cs-blob2 cs-hide" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/orange-blob.svg" alt="abstract shap" width="318" height="221" aria-hidden="true">
+        <!--Leaf-->
+        <img class="cs-leaf cs-hide" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/abstract-leaf.svg" alt="abstract leaf" width="318" height="221" aria-hidden="true">
+    </div>
+    <!--SVG Curve-->
+    <svg class="cs-curve" width="1920" height="136" viewBox="0 0 1920 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="#fff"/>
+    </svg>
+</section>
+                                
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-1478">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Top left image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid1.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid1.jpg" alt="kid" width="413" height="388">
+            </picture>
+            <!--Middle image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid2.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid2.jpg" alt="kid" width="290" height="290">
+            </picture>
+            <!--Bottom right image-->
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid3.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid3.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kid3.jpg" alt="kid" width="382" height="349">
+            </picture>
+            <!--Green Seed-->
+            <img class="cs-floater1" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-seeds-rotated.svg" alt="graphic" width="163" height="121" aria-hidden="true">
+            <!--Red Seeds-->
+            <img class="cs-floater2" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/red-seeds.svg" alt="graphic" width="81" height="73" aria-hidden="true">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">About Happy Days</span>
+            <h2 class="cs-title">Welcome To Happy Days Daycare & Preschool</h2>
+            <p class="cs-text">
+                Happy Days  is a place where you can keep your baby with peace in your mind when you are working in your office for the better future of your child. We promise to take care of your child’s social, emotional, intellectual and physical needs with sensitive care and we also ensure you their security with our life.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    Our job is to make your life easier.
                 </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80" />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16" />
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    Experience childcare as it should be.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    We are childcare professionals.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    State Inspected and Licensed Facility
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    Babysitting with immense love and care.
                 </li>
             </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
+            <div class="button-box">
+                <a class="cs-link" href="tel:555-555-0234">
+                    <picture class="cs-img-wrapper">
+                        <img class="cs-img" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/profile1.jpg" alt="profile" width="52" height="52">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-header">Jenny Wilson</span>
+                        <span class="cs-job">Owner</span>
+                    </div>
+                </a>
+                <a class="cs-link" href="tel:219-924-5555">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-phone.svg" alt="icon" width="24" height="24">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-phone">(219) 924-5555</span>
+                        <span class="cs-link-content">Call with questions</span>
+                    </div>
+                </a>
+            </div>
+            <a href="" class="cs-button-solid">Learn More</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    {% include 'components/cta.html' %}
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1478">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <!--Floating Box-->
+            <div class="cs-box">
+                <!--Blob-->
+                <img class="cs-blob" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/blob-shape3.svg" alt="blob" width="254" height="238" aria-hidden="true">
+                <span class="cs-number">100%</span>
+                <span class="cs-desc">Satisfaction Rating</span>
+            </div>
+            <!--Big Background Image-->
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/girl.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/girl.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/girl.jpg" alt="girl" width="542" height="720" aria-hidden="true">
+            </picture>
+            <!--Oval-->
+            <img class="cs-oval" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/oval.svg" alt="oval" width="727" height="480" aria-hidden="true">
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">About Happy Days</span>
+            <h2 class="cs-title"> Infant Care through Kindergarten</h2>
+            <p class="cs-text">
+                Happy Days is a place where you can keep your baby with peace in your mind when you are working in your office for the better future of your child. We promise to take care of your child’s social, emotional, intellectual and physical needs with sensitive care and we also ensure you their security with our life.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    Our job is to make your life easier.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    Experience childcare as it should be.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    We are childcare professionals.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    State Inspected and Licensed Facility.
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/green-check.svg" alt="checkmark" width="24" height="24">
+                    Babysitting with immense love and care.
+                </li>
+            </ul>
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+        </div>
+    </div>
+</section>
+                               
+<!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
+
+<section id="steps-1480">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">How to get started</span>
+            <h2 class="cs-title">How to Get Started for Children of 5 Months to 12 Years Age</h2>
+            <p class="cs-text">
+                We promise to take care of your child’s social, emotional, intellectual and physical needs with sensitive care and we also ensure you their security with our life.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture">
+                        <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-step-one.png" alt="icon" width="250" height="240" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <svg class="cs-shape" xmlns="http://www.w3.org/2000/svg" width="250" height="240" viewBox="0 0 250 240" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M250 0H0V240H250V0ZM235.294 42.5616C225.203 28.7262 210.241 19.1003 194.57 13.0049C193.739 12.6834 192.956 12.5222 192.166 12.3596C191.477 12.2176 190.782 12.0745 190.045 11.8227C152.721 -0.956179 109.558 -4.51017 73.5294 14.1872C50.8631 25.9488 35.164 47.5503 20.155 68.202C18.3322 70.7101 16.5196 73.2043 14.7059 75.665C-4.82682 102.16 -1.85794 140.81 12.4434 169.064C23.552 191.012 42.0432 209.124 62.2172 222.266C94.645 243.392 126.653 245.017 159.502 222.266C205.641 190.307 279.027 102.512 235.294 42.5616Z" fill="white" />
+                    </svg>
+                </div>
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-link.svg" alt="link" width="20" height="20">
+                </picture>
+                <h3 class="cs-h3">Submit Information</h3>
+                <p class="cs-item-text">
+                    Stitch day care mission is to provide affordable high-quality early education and childcare.
+                </p>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture">
+                        <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-step-two.png" alt="icon" width="250" height="240" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <svg class="cs-shape" xmlns="http://www.w3.org/2000/svg" width="250" height="240" viewBox="0 0 250 240" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M250 0H0V240H250V0ZM235.294 42.5616C225.203 28.7262 210.241 19.1003 194.57 13.0049C193.739 12.6834 192.956 12.5222 192.166 12.3596C191.477 12.2176 190.782 12.0745 190.045 11.8227C152.721 -0.956179 109.558 -4.51017 73.5294 14.1872C50.8631 25.9488 35.164 47.5503 20.155 68.202C18.3322 70.7101 16.5196 73.2043 14.7059 75.665C-4.82682 102.16 -1.85794 140.81 12.4434 169.064C23.552 191.012 42.0432 209.124 62.2172 222.266C94.645 243.392 126.653 245.017 159.502 222.266C205.641 190.307 279.027 102.512 235.294 42.5616Z" fill="white" />
+                    </svg>
+                </div>
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-calendar.svg" alt="link" width="20" height="20">
+                </picture>
+                <h3 class="cs-h3">Schedule an Interview</h3>
+                <p class="cs-item-text">
+                    Stitch day care mission is to provide affordable high-quality early education and childcare.
+                </p>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture">
+                        <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-step-three.png" alt="icon" width="250" height="240" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <svg class="cs-shape" xmlns="http://www.w3.org/2000/svg" width="250" height="240" viewBox="0 0 250 240" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M250 0H0V240H250V0ZM235.294 42.5616C225.203 28.7262 210.241 19.1003 194.57 13.0049C193.739 12.6834 192.956 12.5222 192.166 12.3596C191.477 12.2176 190.782 12.0745 190.045 11.8227C152.721 -0.956179 109.558 -4.51017 73.5294 14.1872C50.8631 25.9488 35.164 47.5503 20.155 68.202C18.3322 70.7101 16.5196 73.2043 14.7059 75.665C-4.82682 102.16 -1.85794 140.81 12.4434 169.064C23.552 191.012 42.0432 209.124 62.2172 222.266C94.645 243.392 126.653 245.017 159.502 222.266C205.641 190.307 279.027 102.512 235.294 42.5616Z" fill="white" />
+                    </svg>
+                </div>
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-bag.svg" alt="link" width="20" height="20">
+                </picture>
+                <h3 class="cs-h3">Enroll With Us</h3>
+                <p class="cs-item-text">
+                    Stitch day care mission is to provide affordable high-quality early education and childcare.
+                </p>
+            </li>
+            <li class="cs-item">
+                <div class="cs-picture-group">
+                    <picture class="cs-picture">
+                        <img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-step-four.png" alt="icon" width="250" height="240" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <svg class="cs-shape" xmlns="http://www.w3.org/2000/svg" width="250" height="240" viewBox="0 0 250 240" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M250 0H0V240H250V0ZM235.294 42.5616C225.203 28.7262 210.241 19.1003 194.57 13.0049C193.739 12.6834 192.956 12.5222 192.166 12.3596C191.477 12.2176 190.782 12.0745 190.045 11.8227C152.721 -0.956179 109.558 -4.51017 73.5294 14.1872C50.8631 25.9488 35.164 47.5503 20.155 68.202C18.3322 70.7101 16.5196 73.2043 14.7059 75.665C-4.82682 102.16 -1.85794 140.81 12.4434 169.064C23.552 191.012 42.0432 209.124 62.2172 222.266C94.645 243.392 126.653 245.017 159.502 222.266C205.641 190.307 279.027 102.512 235.294 42.5616Z" fill="white" />
+                    </svg>
+                </div>
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-baby.svg" alt="link" width="20" height="20">
+                </picture>
+                <h3 class="cs-h3">Join Our Care Family</h3>
+                <p class="cs-item-text">
+                    Stitch day care mission is to provide affordable high-quality early education and childcare.
+                </p>
+            </li>
+        </ul>
+        <button class="cs-button-solid">Learn More</button>
+    </div>
+    <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/day-care-blob.svg" alt="blob" height="690" width="710">
+</section>
+                  
+
+<!-- ============================================ -->
+<!--                   Pricing                    -->
+<!-- ============================================ -->
+
+<section id="pricing-1518">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Pricing</span>
+            <h2 class="cs-title">Prices Vary By Age</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-desc">Infant</span>
+                    <h3 class="cs-h3">1-12 Months</h3>
+                    <svg class="cs-mask" id="Layer_2-1518" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 371.1 166.7"><g id="Layer_1-2-1518"><path stroke="var(--maskBorder)" d="m12.82,19.67C2.01,56.2-7.54,129.35,28.82,159.67c1.42,1.2,2.98,1.42,5,2,2.02.58,4.85,1.18,7,1,98.77-7.85,195.12-12.76,295-7,6.59.39,10.92-1.66,14-6,5.48-7.78,9-16.68,11-27,6.1-30.94,12.55-63.62-2-95-8.96-19.27-30.85-24.93-57-25-108.29-.23-195.35.39-262,2-16.86.41-23.17,2.01-27,15Z"/><polygon fill="var(--maskBG)" points="20.59 9.8 62.59 5.55 255.62 4 322.31 4.17 345.42 13.95 355.8 24.33 365.37 47.45 367.1 58.74 367.1 86.58 362.94 109.29 353.7 143.84 344.08 154.33 335.4 155.73 281.72 153.62 161.51 155.73 67.65 160.68 35.09 162.7 20.59 150.1 7.32 123.07 3.05 90.27 7.13 50.18 20.59 9.8"/><path stroke="var(--maskBorder)" stroke-width="8px" fill="none" d="m13.73,20.9C2.97,57.11-6.54,129.63,29.67,159.69c1.42,1.19,2.97,1.41,4.98,1.98,2.01.57,4.83,1.17,6.97.99,98.36-7.78,194.32-12.65,293.78-6.94,6.56.38,10.87-1.64,13.94-5.95,5.46-7.71,8.96-16.53,10.95-26.77,6.07-30.67,12.5-63.07-1.99-94.18-8.92-19.1-30.72-24.72-56.76-24.78-107.84-.23-194.55.38-260.92,1.98-16.79.41-23.07,1.99-26.89,14.87Z"/></g></svg>
+                </div>
+                <!--Put in a wrapper div so we can add the card styles here and let the top cs-flex group rest on top of it and use a negative margin to make it overlap -->
+                <div class="cs-wrapper">
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            Free lunch
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li">
+                            Outdoor recess
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li">
+                            3 days a week
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li">
+                            3 hours a day
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li cs-disabled">
+                            2 dedicated teachers
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li cs-disabled">
+                            Nap time
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                    </ul>
+                    <div class="cs-info">
+                        <span class="cs-price">
+                            $500 <span class="cs-duration">/mo</span>
+                        </span>
+                        <a href="" class="cs-button-solid">Learn More</a>
+                    </div>
+                    <svg class="cs-blob" width="273" height="136" viewBox="0 0 273 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M255.232 8.51748C307.391 -27.6114 340.366 67.0792 304.261 114.801C204.089 247.201 72.0026 208.615 16.9974 154.545C-38.0078 100.476 54.1202 43.9093 140.688 70.8035C227.255 97.6976 203.073 44.6464 255.232 8.51748Z" fill="var(--secondary)"/>
+                    </svg>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-desc">Toddler</span>
+                    <h3 class="cs-h3">1-3 Years</h3>
+                    <svg class="cs-mask" id="Layer_2-1518" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 371.1 166.7"><g id="Layer_1-2-1518"><path stroke="var(--maskBorder)" d="m12.82,19.67C2.01,56.2-7.54,129.35,28.82,159.67c1.42,1.2,2.98,1.42,5,2,2.02.58,4.85,1.18,7,1,98.77-7.85,195.12-12.76,295-7,6.59.39,10.92-1.66,14-6,5.48-7.78,9-16.68,11-27,6.1-30.94,12.55-63.62-2-95-8.96-19.27-30.85-24.93-57-25-108.29-.23-195.35.39-262,2-16.86.41-23.17,2.01-27,15Z"/><polygon fill="var(--maskBG)" points="20.59 9.8 62.59 5.55 255.62 4 322.31 4.17 345.42 13.95 355.8 24.33 365.37 47.45 367.1 58.74 367.1 86.58 362.94 109.29 353.7 143.84 344.08 154.33 335.4 155.73 281.72 153.62 161.51 155.73 67.65 160.68 35.09 162.7 20.59 150.1 7.32 123.07 3.05 90.27 7.13 50.18 20.59 9.8"/><path stroke="var(--maskBorder)" stroke-width="8px" fill="none" d="m13.73,20.9C2.97,57.11-6.54,129.63,29.67,159.69c1.42,1.19,2.97,1.41,4.98,1.98,2.01.57,4.83,1.17,6.97.99,98.36-7.78,194.32-12.65,293.78-6.94,6.56.38,10.87-1.64,13.94-5.95,5.46-7.71,8.96-16.53,10.95-26.77,6.07-30.67,12.5-63.07-1.99-94.18-8.92-19.1-30.72-24.72-56.76-24.78-107.84-.23-194.55.38-260.92,1.98-16.79.41-23.07,1.99-26.89,14.87Z"/></g></svg>
+                </div>
+                <!--Put in a wrapper div so we can add the card styles here and let the top cs-flex group rest on top of it and use a negative margin to make it overlap -->
+                <div class="cs-wrapper">
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            Free lunch
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li">
+                            Outdoor recess
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li">
+                            3 days a week
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li">
+                            3 hours a day
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li cs-disabled">
+                            2 dedicated teachers
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li cs-disabled">
+                            Nap time
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                    </ul>
+                    <div class="cs-info">
+                        <span class="cs-price">
+                            $400 <span class="cs-duration">/mo</span>
+                        </span>
+                        <a href="" class="cs-button-solid">Learn More</a>
+                    </div>
+                    <svg class="cs-blob" width="273" height="136" viewBox="0 0 273 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M255.232 8.51748C307.391 -27.6114 340.366 67.0792 304.261 114.801C204.089 247.201 72.0026 208.615 16.9974 154.545C-38.0078 100.476 54.1202 43.9093 140.688 70.8035C227.255 97.6976 203.073 44.6464 255.232 8.51748Z" fill="var(--secondary)"/>
+                    </svg>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-desc">Learner</span>
+                    <h3 class="cs-h3">4-6 Years</h3>
+                    <svg class="cs-mask" id="Layer_2-1518" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 371.1 166.7"><g id="Layer_1-2-1518"><path stroke="var(--maskBorder)" d="m12.82,19.67C2.01,56.2-7.54,129.35,28.82,159.67c1.42,1.2,2.98,1.42,5,2,2.02.58,4.85,1.18,7,1,98.77-7.85,195.12-12.76,295-7,6.59.39,10.92-1.66,14-6,5.48-7.78,9-16.68,11-27,6.1-30.94,12.55-63.62-2-95-8.96-19.27-30.85-24.93-57-25-108.29-.23-195.35.39-262,2-16.86.41-23.17,2.01-27,15Z"/><polygon fill="var(--maskBG)" points="20.59 9.8 62.59 5.55 255.62 4 322.31 4.17 345.42 13.95 355.8 24.33 365.37 47.45 367.1 58.74 367.1 86.58 362.94 109.29 353.7 143.84 344.08 154.33 335.4 155.73 281.72 153.62 161.51 155.73 67.65 160.68 35.09 162.7 20.59 150.1 7.32 123.07 3.05 90.27 7.13 50.18 20.59 9.8"/><path stroke="var(--maskBorder)" stroke-width="8px" fill="none" d="m13.73,20.9C2.97,57.11-6.54,129.63,29.67,159.69c1.42,1.19,2.97,1.41,4.98,1.98,2.01.57,4.83,1.17,6.97.99,98.36-7.78,194.32-12.65,293.78-6.94,6.56.38,10.87-1.64,13.94-5.95,5.46-7.71,8.96-16.53,10.95-26.77,6.07-30.67,12.5-63.07-1.99-94.18-8.92-19.1-30.72-24.72-56.76-24.78-107.84-.23-194.55.38-260.92,1.98-16.79.41-23.07,1.99-26.89,14.87Z"/></g></svg>
+                </div>
+                <!--Put in a wrapper div so we can add the card styles here and let the top cs-flex group rest on top of it and use a negative margin to make it overlap -->
+                <div class="cs-wrapper">
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            Free lunch
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li">
+                            Outdoor recess
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li">
+                            3 days a week
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li">
+                            3 hours a day
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li cs-disabled">
+                            2 dedicated teachers
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                        <li class="cs-li cs-disabled">
+                            Nap time
+                            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-check.svg" alt="checkmark" width="24" height="24">
+                        </li>
+                    </ul>
+                    <div class="cs-info">
+                        <span class="cs-price">
+                           $300 <span class="cs-duration">/mo</span>
+                        </span>
+                        <a href="" class="cs-button-solid">Learn More</a>
+                    </div>
+                    <svg class="cs-blob" width="273" height="136" viewBox="0 0 273 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M255.232 8.51748C307.391 -27.6114 340.366 67.0792 304.261 114.801C204.089 247.201 72.0026 208.615 16.9974 154.545C-38.0078 100.476 54.1202 43.9093 140.688 70.8035C227.255 97.6976 203.073 44.6464 255.232 8.51748Z" fill="var(--secondary)"/>
+                    </svg>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--SVG Graphics at top and bottom-->
+    <svg class="cs-background cs-background-top" xmlns="http://www.w3.org/2000/svg" width="1920" height="39"
+                viewBox="0 0 1920 39" fill="none">
+            <path
+                d="M1920 0H0V15.8216L4.95532 13.3966L18.1455 15.2801L28.6394 22.5944L42.0481 24.423L54.0723 27.0599L66.8979 21.3623L78.7034 23.6147L90.9463 27.8134L102.533 21.5742L114.776 24.5329L126.654 25.2314L138.605 24.7997L148.881 29.1554L160.759 28.6217L171.18 33.354L183.569 27.1698L194.573 29.9637L207.69 30.0186L219.277 25.7179L228.531 18.9373L240.556 16.0335L253.017 13.3966L265.989 13.0748L279.033 14.5267L292.296 16.1983L305.413 12.5333L317.437 17.0537L331.065 15.0682L342.943 19.157L354.749 23.0261L366.773 26.1496L378.943 29.2652L391.331 31.6903L405.469 28.0802L417.274 32.067L428.57 35.1277L440.375 35.2925L451.598 38.4631L463.622 37.7097L475.208 38.8947L487.087 35.7241L498.455 36.7993L510.115 38.1413L522.285 34.2173L536.058 32.012L547.864 26.3065L561.928 29.2652L574.171 20.7658L587.434 22.0058L599.604 24.0463L611.191 21.5192L623.215 24.6428L634.947 25.2863L646.607 23.9443L658.413 20.499L670.437 17.7051L681.805 24.423L694.048 20.7658L706.072 20.1223L728.226 29.43L741.197 24.6428H753.221L761.31 35.6692L773.771 34.1624L785.65 29.8067L796.29 31.2586L809.261 34.594L818.37 26.7382L828.864 22.1628L842.418 22.9711L852.329 17.0537L866.248 19.314L875.722 11.7877L887.673 9.95128L900.28 11.2462L911.94 8.2875L924.474 10.328L937.373 8.17763L949.98 7.15739L961.931 10.3123L966.887 7.8951L980.077 15.1545L990.57 22.4689L1003.98 24.2974L1016 26.9344L1028.83 21.2367L1040.63 23.4891L1052.88 27.6878L1064.46 21.4486L1076.71 24.4073L1088.59 25.1058L1100.54 24.6741L1110.81 29.0298L1122.69 28.4961L1133.11 33.2285L1145.5 27.0442L1156.5 29.8381L1169.62 29.8931L1181.21 25.5924L1190.46 18.8117L1202.49 15.9079L1214.95 13.271L1227.92 12.9492L1240.96 14.4011L1254.23 16.0727L1267.34 12.4077L1279.37 16.9282L1293 14.9426L1304.87 19.0236L1316.68 22.9005L1328.7 26.024L1340.87 29.1397L1353.26 31.5647L1367.4 27.9546L1379.21 31.9414L1390.5 35.0021L1402.31 35.1669L1413.53 38.3375L1425.55 37.5841L1437.14 38.7692L1449.02 35.5986L1460.39 36.6738L1472.05 38.0158L1484.22 34.0918L1497.99 31.8865L1509.79 26.181L1523.86 29.1397L1536.1 20.6403L1549.37 21.8803L1561.54 23.9207L1573.12 21.3937L1585.15 24.5172L1596.88 25.1607L1608.54 23.8187L1620.34 20.3734L1632.37 17.5717L1643.74 24.2974L1655.98 20.6403L1668 19.9967L1690.16 29.3045L1703.13 24.5172H1715.15L1723.24 35.5436L1735.7 34.0368L1747.58 29.6812L1758.22 31.1331L1771.19 34.4685L1780.3 26.6126L1790.79 22.0372L1804.35 22.8456L1814.26 16.9282L1828.18 19.1884L1837.65 11.6543L1849.6 9.82571L1862.21 11.1206L1873.87 8.16193L1886.41 10.2024L1899.3 8.05206L1911.91 7.03182L1920 7.78523V0Z"
+                fill="var(--backgroundBG)" />
+    </svg>
+    <svg class="cs-background cs-background-bottom" xmlns="http://www.w3.org/2000/svg" width="1920" height="39"
+            viewBox="0 0 1920 39" fill="none">
+        <path
+            d="M1920 0H0V15.8216L4.95532 13.3966L18.1455 15.2801L28.6394 22.5944L42.0481 24.423L54.0723 27.0599L66.8979 21.3623L78.7034 23.6147L90.9463 27.8134L102.533 21.5742L114.776 24.5329L126.654 25.2314L138.605 24.7997L148.881 29.1554L160.759 28.6217L171.18 33.354L183.569 27.1698L194.573 29.9637L207.69 30.0186L219.277 25.7179L228.531 18.9373L240.556 16.0335L253.017 13.3966L265.989 13.0748L279.033 14.5267L292.296 16.1983L305.413 12.5333L317.437 17.0537L331.065 15.0682L342.943 19.157L354.749 23.0261L366.773 26.1496L378.943 29.2652L391.331 31.6903L405.469 28.0802L417.274 32.067L428.57 35.1277L440.375 35.2925L451.598 38.4631L463.622 37.7097L475.208 38.8947L487.087 35.7241L498.455 36.7993L510.115 38.1413L522.285 34.2173L536.058 32.012L547.864 26.3065L561.928 29.2652L574.171 20.7658L587.434 22.0058L599.604 24.0463L611.191 21.5192L623.215 24.6428L634.947 25.2863L646.607 23.9443L658.413 20.499L670.437 17.7051L681.805 24.423L694.048 20.7658L706.072 20.1223L728.226 29.43L741.197 24.6428H753.221L761.31 35.6692L773.771 34.1624L785.65 29.8067L796.29 31.2586L809.261 34.594L818.37 26.7382L828.864 22.1628L842.418 22.9711L852.329 17.0537L866.248 19.314L875.722 11.7877L887.673 9.95128L900.28 11.2462L911.94 8.2875L924.474 10.328L937.373 8.17763L949.98 7.15739L961.931 10.3123L966.887 7.8951L980.077 15.1545L990.57 22.4689L1003.98 24.2974L1016 26.9344L1028.83 21.2367L1040.63 23.4891L1052.88 27.6878L1064.46 21.4486L1076.71 24.4073L1088.59 25.1058L1100.54 24.6741L1110.81 29.0298L1122.69 28.4961L1133.11 33.2285L1145.5 27.0442L1156.5 29.8381L1169.62 29.8931L1181.21 25.5924L1190.46 18.8117L1202.49 15.9079L1214.95 13.271L1227.92 12.9492L1240.96 14.4011L1254.23 16.0727L1267.34 12.4077L1279.37 16.9282L1293 14.9426L1304.87 19.0236L1316.68 22.9005L1328.7 26.024L1340.87 29.1397L1353.26 31.5647L1367.4 27.9546L1379.21 31.9414L1390.5 35.0021L1402.31 35.1669L1413.53 38.3375L1425.55 37.5841L1437.14 38.7692L1449.02 35.5986L1460.39 36.6738L1472.05 38.0158L1484.22 34.0918L1497.99 31.8865L1509.79 26.181L1523.86 29.1397L1536.1 20.6403L1549.37 21.8803L1561.54 23.9207L1573.12 21.3937L1585.15 24.5172L1596.88 25.1607L1608.54 23.8187L1620.34 20.3734L1632.37 17.5717L1643.74 24.2974L1655.98 20.6403L1668 19.9967L1690.16 29.3045L1703.13 24.5172H1715.15L1723.24 35.5436L1735.7 34.0368L1747.58 29.6812L1758.22 31.1331L1771.19 34.4685L1780.3 26.6126L1790.79 22.0372L1804.35 22.8456L1814.26 16.9282L1828.18 19.1884L1837.65 11.6543L1849.6 9.82571L1862.21 11.1206L1873.87 8.16193L1886.41 10.2024L1899.3 8.05206L1911.91 7.03182L1920 7.78523V0Z"
+            fill="var(--backgroundBG)" />
+    </svg>
+</section>
+                 
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-1505">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Frequently asked questions</span>
+            <h2 class="cs-title">Frequently Asked Questions About Our Daycare Services</h2>
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids-playing.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids-playing.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids-playing.jpg" alt="kids playing" width="586" height="376">
+                </picture>
+                <!--SVG Mask-->
+                <svg class="cs-mask" id="Layer_2-1505" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 586 156"><defs><style>#faq .cls-1{fill:var(--maskColor);stroke-width:0px;}</style></defs><g id="Layer_1-2-1505"><path class="cls-1" d="m586,0H0c5.17,18.67,32.4,56,100,56h386c55.23,0,100,44.77,100,100V0Z"/></g></svg>
+            </div>
+        </div>
+        <div class="cs-flex-group">
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Do you offer snacks and meals?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Yes, we offer nutritious meals and snacks prepared onsite, taking into consideration any dietary restrictions and allergies.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What age groups does Happy Days cater to?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        We typically cater to children between the ages of 2 and 6 years old. However, we do offer infant care for children as young as 6 weeks old. We also run a summer camp for children up to 12 years old. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What safety measures are in place?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Some of our safety measures include: double door entry, security cameras, and a fenced-in playground. We also have a strict pick-up policy that requires parents to show a photo ID before their child is released to them.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            How can I enroll my child at Happy Days Daycare?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        First, please fill out our online form. Then, we will contact you to schedule a tour of our facility. After the tour, we will provide you with an enrollment packet. Once you have completed the packet, you can submit it to us along with the registration fee.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What are the operating hours of Happy Days?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                       We are open Monday through Friday from 7:00 AM to 6:00 PM. We are closed on weekends and major holidays.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--Red Graphic-->
+    <img class="cs-floater cs-floater1" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/red-squiggle2.svg" alt="graphic" loading="lazy" decoding="async" width="312" height="222" aria-hidden="true">
+    <!--Leaf-->
+    <img class="cs-floater cs-floater2" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/leaf2.svg" alt="graphic" loading="lazy" decoding="async" width="207" height="211" aria-hidden="true">
+    <!--Top SVG zig zag-->
+    <svg class="cs-top" width="1920" height="39" viewBox="0 0 1920 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 -0.388672H0V15.4329L4.95532 13.0079L18.1455 14.8914L28.6394 22.2058L42.0481 24.0343L54.0723 26.6713L66.8979 20.9736L78.7034 23.226L90.9463 27.4247L102.533 21.1855L114.776 24.1442L126.654 24.8427L138.605 24.411L148.881 28.7667L160.759 28.233L171.18 32.9654L183.569 26.7811L194.573 29.575L207.69 29.63L219.277 25.3293L228.531 18.5486L240.556 15.6448L253.017 13.0079L265.989 12.6861L279.033 14.138L292.296 15.8096L305.413 12.1446L317.437 16.6651L331.065 14.6795L342.943 18.7683L354.749 22.6374L366.773 25.7609L378.943 28.8766L391.331 31.3016L405.469 27.6915L417.274 31.6783L428.57 34.739L440.375 34.9038L451.598 38.0744L463.622 37.321L475.208 38.5061L487.087 35.3355L498.455 36.4107L510.115 37.7527L522.285 33.8287L536.058 31.6234L547.864 25.9179L561.928 28.8766L574.171 20.3772L587.434 21.6172L599.604 23.6576L611.191 21.1306L623.215 24.2541L634.947 24.8976L646.607 23.5556L658.413 20.1103L670.437 17.3164L681.805 24.0343L694.048 20.3772L706.072 19.7336L728.226 29.0414L741.197 24.2541H753.221L761.31 35.2805L773.771 33.7737L785.65 29.4181L796.29 30.87L809.261 34.2054L818.37 26.3495L828.864 21.7741L842.418 22.5825L852.329 16.6651L866.248 18.9253L875.722 11.399L887.673 9.56261L900.28 10.8575L911.94 7.89883L924.474 9.93931L937.373 7.78896L949.98 6.76871L961.931 9.92362L966.887 7.50643L980.077 14.7658L990.57 22.0802L1003.98 23.9088L1016 26.5457L1028.83 20.848L1040.63 23.1004L1052.88 27.2991L1064.46 21.0599L1076.71 24.0186L1088.59 24.7171L1100.54 24.2855L1110.81 28.6411L1122.69 28.1075L1133.11 32.8398L1145.5 26.6556L1156.5 29.4495L1169.62 29.5044L1181.21 25.2037L1190.46 18.423L1202.49 15.5192L1214.95 12.8823L1227.92 12.5605L1240.96 14.0124L1254.23 15.6841L1267.34 12.019L1279.37 16.5395L1293 14.5539L1304.87 18.6349L1316.68 22.5118L1328.7 25.6353L1340.87 28.751L1353.26 31.176L1367.4 27.5659L1379.21 31.5527L1390.5 34.6135L1402.31 34.7783L1413.53 37.9489L1425.55 37.1955L1437.14 38.3805L1449.02 35.2099L1460.39 36.2851L1472.05 37.6271L1484.22 33.7031L1497.99 31.4978L1509.79 25.7923L1523.86 28.751L1536.1 20.2516L1549.37 21.4916L1561.54 23.5321L1573.12 21.005L1585.15 24.1285L1596.88 24.7721L1608.54 23.43L1620.34 19.9848L1632.37 17.183L1643.74 23.9088L1655.98 20.2516L1668 19.6081L1690.16 28.9158L1703.13 24.1285H1715.15L1723.24 35.155L1735.7 33.6482L1747.58 29.2925L1758.22 30.7444L1771.19 34.0798L1780.3 26.2239L1790.79 21.6485L1804.35 22.4569L1814.26 16.5395L1828.18 18.7997L1837.65 11.2656L1849.6 9.43704L1862.21 10.732L1873.87 7.77326L1886.41 9.81374L1899.3 7.66339L1911.91 6.64315L1920 7.39656V-0.388672Z" fill="white"/>
+        </svg>
+    <!--Bottom SVG zig zag-->
+    <svg class="cs-bottom" width="1900" height="39" viewBox="0 0 1900 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1900 38.8948H-20V23.0732L-15.0447 25.4982L-1.85449 23.6147L8.6394 16.3004L22.0481 14.4718L34.0723 11.8348L46.8979 17.5325L58.7034 15.2801L70.9463 11.0814L82.5332 17.3206L94.7759 14.3619L106.654 13.6634L118.605 14.0951L128.881 9.73941L140.759 10.2731L151.18 5.54073L163.569 11.725L174.573 8.93107L187.69 8.87613L199.277 13.1768L208.531 19.9575L220.556 22.8613L233.017 25.4982L245.989 25.82L259.033 24.3681L272.296 22.6965L285.413 26.3615L297.437 21.841L311.065 23.8266L322.943 19.7378L334.749 15.8687L346.773 12.7452L358.943 9.62954L371.331 7.20451L385.469 10.8146L397.274 6.8278L408.57 3.76708L420.375 3.60227L431.598 0.431671L443.622 1.18508L455.208 3.05176e-05L467.087 3.17063L478.455 2.09545L490.115 0.753441L502.285 4.67744L516.058 6.88274L527.864 12.5882L541.928 9.62954L554.171 18.1289L567.434 16.889L579.604 14.8485L591.191 17.3755L603.215 14.252L614.947 13.6085L626.607 14.9505L638.413 18.3958L650.437 21.1897L661.805 14.4718L674.048 18.1289L686.072 18.7725L708.226 9.46473L721.197 14.252H733.221L741.31 3.22556L753.771 4.73238L765.65 9.08803L776.29 7.63615L789.261 4.30074L798.37 12.1566L808.864 16.732L822.418 15.9236L832.329 21.841L846.248 19.5808L855.722 27.1071L867.673 28.9435L880.28 27.6486L891.94 30.6073L904.474 28.5668L917.373 30.7171L929.98 31.7374L941.931 28.5825L946.887 30.9997L960.077 23.7403L970.57 16.4259L983.979 14.5973L996.003 11.9604L1008.83 17.6581L1020.63 15.4057L1032.88 11.207L1044.46 17.4462L1056.71 14.4875L1068.59 13.789L1080.54 14.2206L1090.81 9.86498L1102.69 10.3986L1113.11 5.66629L1125.5 11.8505L1136.5 9.05664L1149.62 9.0017L1161.21 13.3024L1170.46 20.0831L1182.49 22.9869L1194.95 25.6238L1207.92 25.9456L1220.96 24.4937L1234.23 22.822L1247.34 26.4871L1259.37 21.9666L1273 23.9522L1284.87 19.8712L1296.68 15.9943L1308.7 12.8708L1320.87 9.75511L1333.26 7.33007L1347.4 10.9402L1359.21 6.95337L1370.5 3.89264L1382.31 3.72784L1393.53 0.55724L1405.55 1.31065L1417.14 0.125599L1429.02 3.2962L1440.39 2.22102L1452.05 0.879009L1464.22 4.80301L1477.99 7.0083L1489.79 12.7138L1503.86 9.75511L1516.1 18.2545L1529.37 17.0145L1541.54 14.974L1553.12 17.5011L1565.15 14.3776L1576.88 13.7341L1588.54 15.0761L1600.34 18.5213L1612.37 21.3231L1623.74 14.5973L1635.98 18.2545L1648 18.898L1670.16 9.5903L1683.13 14.3776H1695.15L1703.24 3.35113L1715.7 4.85795L1727.58 9.2136L1738.22 7.76171L1751.19 4.42631L1760.3 12.2822L1770.79 16.8576L1784.35 16.0492L1794.26 21.9666L1808.18 19.7064L1817.65 27.2405L1829.6 29.0691L1842.21 27.7741L1853.87 30.7328L1866.41 28.6924L1879.3 30.8427L1891.91 31.863L1900 31.1095V38.8948Z" fill="white"/>
+        </svg>
+</section>
+               
+<!-- ============================================ -->
+<!--               Why Choose Us                  -->
+<!-- ============================================ -->
+
+<section id="why-choose-1485">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Top left image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/child6.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/child6.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/child6.jpg" alt="kid" width="647" height="600">
+            </picture>
+            <!--Middle image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids5.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/kids5.jpg" alt="kid" width="320" height="320">
+            </picture>
+            <!--Flower-->
+            <img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/flower3.svg" alt="graphic" width="153" height="148" aria-hidden="true">
+            <!--Sqiggle-->
+            <img class="cs-squiggle" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/squiggle4.svg" alt="graphic" width="215" height="61" aria-hidden="true">
+            <!--SVG Mask-->
+            <svg class="cs-mask" width="647" height="600" viewBox="0 0 647 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="cs-outer-mask" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H647V600H0V0ZM38 110C64.0297 75.766 102.579 52.0824 143 37C144.788 36.3365 146.555 35.5378 148.324 34.7378C150.529 33.7407 152.738 32.7417 155 32C251.273 0.380304 364.071 -8.26436 457 38C514.621 66.6831 553.453 118.152 591.339 168.368C596.562 175.29 601.767 182.188 607 189C657.382 254.558 650.888 352.089 614 422C585.347 476.308 539.036 519.481 487 552C403.358 604.274 320.729 610.296 236 554C116.994 474.921 -74.8032 258.339 38 110Z" fill="#FFF8F5"/>
+                <!--Svg Border-->
+                <path class="cs-mask-border" d="M609.578 419.667L614 422L609.578 419.667C645.882 350.863 651.85 255.566 603.035 192.047L603.035 192.046C597.763 185.184 592.537 178.261 587.308 171.335C549.335 121.032 511.26 70.5951 454.772 42.4761L454.772 42.476C363.478 -2.9739 252.173 5.34746 156.56 36.7504L156.558 36.7511C154.801 37.3273 153.023 38.1029 151.033 39.0003C150.82 39.0965 150.603 39.1945 150.384 39.2937C148.637 40.0841 146.708 40.9569 144.748 41.6845C104.889 56.5573 67.259 79.7797 41.9802 113.026L38 110L41.98 113.027C-12.5389 184.72 5.99713 273.442 54.3776 355.432C102.668 437.269 179.806 510.656 238.767 549.836C280.403 577.499 321.25 589.69 361.787 588.715C402.372 587.739 443.075 573.556 484.35 547.76C535.868 515.565 581.448 472.984 609.578 419.667Z" stroke="#FFD3C6" stroke-width="10"/>
+            </svg>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">About Happy Days Daycare</span>
+            <h2 class="cs-title">We’re Passionate About Early Education</h2>
+            <p class="cs-text">
+               Happy Days is a place where you can keep your baby with peace in your mind when you are working in your office for the better future of your child. We promise to take care of your child’s social, emotional, intellectual and physical needs with sensitive care and we also ensure you their security with our life.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/direction.svg" decoding="async" alt="icon" width="36" height="36" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Our Mission</h3>
+                        <p class="cs-li-text">
+                            We believe that every child is unique and will grow at his or her own pace. Our teachers spend time nurturing children’s strengths and encouraging them to reach new heights. We are committed to providing a safe, nurturing environment at our daycare.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/target.svg" decoding="async" alt="icon" width="36" height="36" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Our Vision</h3>
+                        <p class="cs-li-text">
+                            We will be recognized as a leader in early childhood education. We will be known for our ability to provide a safe, nurturing environment for children to learn and grow. We will be a model for other early childhood centers.
+                        </p>
+                    </div>
+                </li>
+            </ul>                 
+            <a href="" class="cs-button-solid">Learn More</a>
+        </div>
+    </div>
+    <!--Top Zig Zag-->
+    <svg class="cs-top" width="1920" height="39" viewBox="0 0 1920 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 0H0V15.8216L4.95532 13.3966L18.1455 15.2801L28.6394 22.5944L42.0481 24.423L54.0723 27.0599L66.8979 21.3623L78.7034 23.6147L90.9463 27.8134L102.533 21.5742L114.776 24.5329L126.654 25.2314L138.605 24.7997L148.881 29.1554L160.759 28.6217L171.18 33.354L183.569 27.1698L194.573 29.9637L207.69 30.0186L219.277 25.7179L228.531 18.9373L240.556 16.0335L253.017 13.3966L265.989 13.0748L279.033 14.5267L292.296 16.1983L305.413 12.5333L317.437 17.0537L331.065 15.0682L342.943 19.157L354.749 23.0261L366.773 26.1496L378.943 29.2652L391.331 31.6903L405.469 28.0802L417.274 32.067L428.57 35.1277L440.375 35.2925L451.598 38.4631L463.622 37.7097L475.208 38.8947L487.087 35.7241L498.455 36.7993L510.115 38.1413L522.285 34.2173L536.058 32.012L547.864 26.3065L561.928 29.2652L574.171 20.7658L587.434 22.0058L599.604 24.0463L611.191 21.5192L623.215 24.6428L634.947 25.2863L646.607 23.9443L658.413 20.499L670.437 17.7051L681.805 24.423L694.048 20.7658L706.072 20.1223L728.226 29.43L741.197 24.6428H753.221L761.31 35.6692L773.771 34.1624L785.65 29.8067L796.29 31.2586L809.261 34.594L818.37 26.7382L828.864 22.1628L842.418 22.9711L852.329 17.0537L866.248 19.314L875.722 11.7877L887.673 9.95128L900.28 11.2462L911.94 8.2875L924.474 10.328L937.373 8.17763L949.98 7.15739L961.931 10.3123L966.887 7.8951L980.077 15.1545L990.57 22.4689L1003.98 24.2974L1016 26.9344L1028.83 21.2367L1040.63 23.4891L1052.88 27.6878L1064.46 21.4486L1076.71 24.4073L1088.59 25.1058L1100.54 24.6741L1110.81 29.0298L1122.69 28.4961L1133.11 33.2285L1145.5 27.0442L1156.5 29.8381L1169.62 29.8931L1181.21 25.5924L1190.46 18.8117L1202.49 15.9079L1214.95 13.271L1227.92 12.9492L1240.96 14.4011L1254.23 16.0727L1267.34 12.4077L1279.37 16.9282L1293 14.9426L1304.87 19.0236L1316.68 22.9005L1328.7 26.024L1340.87 29.1397L1353.26 31.5647L1367.4 27.9546L1379.21 31.9414L1390.5 35.0021L1402.31 35.1669L1413.53 38.3375L1425.55 37.5841L1437.14 38.7692L1449.02 35.5986L1460.39 36.6738L1472.05 38.0158L1484.22 34.0918L1497.99 31.8865L1509.79 26.181L1523.86 29.1397L1536.1 20.6403L1549.37 21.8803L1561.54 23.9207L1573.12 21.3937L1585.15 24.5172L1596.88 25.1607L1608.54 23.8187L1620.34 20.3734L1632.37 17.5717L1643.74 24.2974L1655.98 20.6403L1668 19.9967L1690.16 29.3045L1703.13 24.5172H1715.15L1723.24 35.5436L1735.7 34.0368L1747.58 29.6812L1758.22 31.1331L1771.19 34.4685L1780.3 26.6126L1790.79 22.0372L1804.35 22.8456L1814.26 16.9282L1828.18 19.1884L1837.65 11.6543L1849.6 9.82571L1862.21 11.1206L1873.87 8.16193L1886.41 10.2024L1899.3 8.05206L1911.91 7.03182L1920 7.78523V0Z" fill="white"/>
+        </svg>
+    <!--Bottom Zig Zag-->
+    <svg class="cs-bottom" width="1920" height="39" viewBox="0 0 1920 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 38.8948H0V23.0732L4.95532 25.4982L18.1455 23.6147L28.6394 16.3004L42.0481 14.4718L54.0723 11.8348L66.8979 17.5325L78.7034 15.2801L90.9463 11.0814L102.533 17.3206L114.776 14.3619L126.654 13.6634L138.605 14.0951L148.881 9.73941L160.759 10.2731L171.18 5.54073L183.569 11.725L194.573 8.93107L207.69 8.87613L219.277 13.1768L228.531 19.9575L240.556 22.8613L253.017 25.4982L265.989 25.82L279.033 24.3681L292.296 22.6965L305.413 26.3615L317.437 21.841L331.065 23.8266L342.943 19.7378L354.749 15.8687L366.773 12.7452L378.943 9.62954L391.331 7.20451L405.469 10.8146L417.274 6.8278L428.57 3.76708L440.375 3.60227L451.598 0.431672L463.622 1.18508L475.208 3.12403e-05L487.087 3.17063L498.455 2.09545L510.115 0.75344L522.285 4.67745L536.058 6.88274L547.864 12.5882L561.928 9.62954L574.171 18.1289L587.434 16.889L599.604 14.8485L611.191 17.3755L623.215 14.252L634.947 13.6085L646.607 14.9505L658.413 18.3958L670.437 21.1897L681.805 14.4718L694.048 18.1289L706.072 18.7725L728.226 9.46473L741.197 14.252H753.221L761.31 3.22556L773.771 4.73238L785.65 9.08803L796.29 7.63615L809.261 4.30074L818.37 12.1566L828.864 16.732L842.418 15.9236L852.329 21.841L866.248 19.5808L875.722 27.1071L887.673 28.9435L900.28 27.6486L911.94 30.6073L924.474 28.5668L937.373 30.7171L949.98 31.7374L961.931 28.5825L966.887 30.9997L980.077 23.7403L990.57 16.4259L1003.98 14.5973L1016 11.9604L1028.83 17.6581L1040.63 15.4057L1052.88 11.207L1064.46 17.4462L1076.71 14.4875L1088.59 13.789L1100.54 14.2206L1110.81 9.86498L1122.69 10.3986L1133.11 5.6663L1145.5 11.8505L1156.5 9.05664L1169.62 9.0017L1181.21 13.3024L1190.46 20.0831L1202.49 22.9869L1214.95 25.6238L1227.92 25.9456L1240.96 24.4937L1254.23 22.822L1267.34 26.4871L1279.37 21.9666L1293 23.9522L1304.87 19.8712L1316.68 15.9943L1328.7 12.8708L1340.87 9.75511L1353.26 7.33007L1367.4 10.9402L1379.21 6.95337L1390.5 3.89264L1402.31 3.72784L1413.53 0.55724L1425.55 1.31065L1437.14 0.125599L1449.02 3.2962L1460.39 2.22102L1472.05 0.879009L1484.22 4.80301L1497.99 7.00831L1509.79 12.7138L1523.86 9.75511L1536.1 18.2545L1549.37 17.0145L1561.54 14.974L1573.12 17.5011L1585.15 14.3776L1596.88 13.7341L1608.54 15.0761L1620.34 18.5213L1632.37 21.3231L1643.74 14.5973L1655.98 18.2545L1668 18.898L1690.16 9.5903L1703.13 14.3776H1715.15L1723.24 3.35113L1735.7 4.85795L1747.58 9.2136L1758.22 7.76171L1771.19 4.42631L1780.3 12.2822L1790.79 16.8576L1804.35 16.0492L1814.26 21.9666L1828.18 19.7064L1837.65 27.2405L1849.6 29.0691L1862.21 27.7741L1873.87 30.7328L1886.41 28.6924L1899.3 30.8427L1911.91 31.863L1920 31.1095V38.8948Z" fill="white"/>
+    </svg>
+</section>
+                  
+
+
+  
 {% endblock %}

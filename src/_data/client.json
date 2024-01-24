@@ -1,15 +1,15 @@
 {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
+    "name": "Happy Days Daycare",
+    "email": "hello@happydays.co",
     "phoneForTel": "555-779-4407",
     "phoneFormatted": "(555) 779-4407",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
+        "lineOne": "123 Main St",
+        "lineTwo": "Suite 100",
         "city": "Denver",
         "state": "CO",
         "zip": "80206",
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
-    "domain": "https://www.codestitch.app"
+    "domain": "happydays.co"
 }
