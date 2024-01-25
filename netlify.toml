@@ -1,7 +1,6 @@
 [build]
-
-publish = "public/"
-command = “CI= npm run build”
+  publish = "public/"
+  command = "npm run build"
   
 
 [[plugins]]
